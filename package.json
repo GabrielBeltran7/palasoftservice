@@ -1,0 +1,32 @@
+{
+    "name": "PalasoftServices",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css"
+    },
+    "dependencies": {
+        "@emailjs/browser": "^4.4.1",
+        "aos": "^2.3.4",
+        "gray-matter": "^4.0.3",
+        "install": "^0.13.0",
+        "next": "^15.5.4",
+        "next-mdx-remote": "^5.0.0",
+        "npm": "^11.6.1",
+        "react": "18.2.0",
+        "react-countup": "^6.5.3",
+        "react-dom": "18.2.0",
+        "react-intersection-observer": "^9.16.0",
+        "react-modal-video": "^2.0.1",
+        "react-scroll-trigger": "^0.6.14",
+        "remark": "^15.0.1",
+        "remark-html": "^16.0.1",
+        "sass": "^1.72.0",
+        "swiper": "^11.1.0",
+        "wowjs": "^1.1.3"
+    }
+}
