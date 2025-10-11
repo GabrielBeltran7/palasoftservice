@@ -26,7 +26,7 @@ export const metadata = {
   openGraph: {
     title: 'Palasoft Service - Soluciones de TI y Tecnología',
     description: 'Transformamos ideas en soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.',
-    url: 'https://palasoftservices.com',
+    url: 'https://palasoftservice.vercel.app/',
     siteName: 'Palasoft Service',
     images: [
       {
