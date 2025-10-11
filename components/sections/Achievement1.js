@@ -1,4 +1,4 @@
-import CounterUpAnimated from "../elements/CounterUpAnimated"
+import CounterUpFallback from "../elements/CounterUpFallback"
 
 
 export default function Achievement1() {
@@ -19,7 +19,7 @@ export default function Achievement1() {
                                     <img src="/assets/img/achievement-icon/01.svg" alt="icon-img" />
                                 </div>
                                 <div className="content">
-                                    <h2><CounterUpAnimated count={1000} delay={300}/>+</h2>
+                                    <h2><CounterUpFallback count={1000} delay={300}/>+</h2>
                                     <p>Clientes Satisfechos</p>
                                 </div>
                             </div>
@@ -28,7 +28,7 @@ export default function Achievement1() {
                                     <img src="/assets/img/achievement-icon/02.svg" alt="icon-img" />
                                 </div>
                                 <div className="content">
-                                    <h2><CounterUpAnimated count={250} delay={500}/>+</h2>
+                                    <h2><CounterUpFallback count={250} delay={500}/>+</h2>
                                     <p>Proyectos Completados</p>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@ export default function Achievement1() {
                                     <img src="/assets/img/achievement-icon/03.svg" alt="icon-img" />
                                 </div>
                                 <div className="content">
-                                    <h2><CounterUpAnimated count={30} delay={700}/>+</h2>
+                                    <h2><CounterUpFallback count={30} delay={700}/>+</h2>
                                     <p>Expertos Calificados</p>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@ export default function Achievement1() {
                                     <img src="/assets/img/achievement-icon/04.svg" alt="icon-img" />
                                 </div>
                                 <div className="content">
-                                    <h2><CounterUpAnimated count={6} delay={900}/>+</h2>
+                                    <h2><CounterUpFallback count={6} delay={900}/>+</h2>
                                     <p>Años de Experiencia</p>
                                 </div>
                             </div>
