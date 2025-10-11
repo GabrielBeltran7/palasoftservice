@@ -75,7 +75,7 @@ export default function Team1() {
                   <div className="team-title">
                     <span>{member.role}</span>
                     <h4>
-                      <Link href={member.profileUrl}>{member.name}</Link>
+                      <Link href="/team">{member.name}</Link>
                     </h4>
                   </div>
                   <p>
