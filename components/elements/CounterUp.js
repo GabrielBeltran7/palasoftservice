@@ -1,28 +1,39 @@
 'use client'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
 
 export default function CounterUp({ count, time = 2 }) {
-  const [counterOn, setCounterOn] = useState(false);
-  const { ref, inView } = useInView({
-    triggerOnce: true, // solo una vez
-    threshold: 0.2,    // % de visibilidad para activarse
-  });
+  const [isClient, setIsClient] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
-  // cuando el elemento entra en pantalla, activa el contador
-  if (inView && !counterOn) {
-    setCounterOn(true);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (isClient) {
+      const timer = setTimeout(() => {
+        setHasAnimated(true);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isClient]);
+
+  // Fallback para SSR - mostrar el número sin animación
+  if (!isClient) {
+    return <span>{count}</span>;
   }
 
   return (
-    <span ref={ref}>
-      {counterOn && (
+    <span suppressHydrationWarning>
+      {hasAnimated ? (
         <CountUp end={count} duration={time}>
           {({ countUpRef }) => (
             <span ref={countUpRef} className="count"></span>
           )}
         </CountUp>
+      ) : (
+        <span>{count}</span>
       )}
     </span>
   );
