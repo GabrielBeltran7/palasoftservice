@@ -69,7 +69,7 @@ export default function Layout({ headerStyle, footerStyle, onePageNav, breadcrum
 
       <Footer1 />
       <Link
-        href="https://wa.me/573208903406?text=Hola%20Palasoft%20Services%2C%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios."
+        href="https://wa.me/573208903406?text=Hola%20Palasoft%20Service%2C%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios."
         target="_blank"
         rel="noopener noreferrer"
         className="floating-whatsapp"
