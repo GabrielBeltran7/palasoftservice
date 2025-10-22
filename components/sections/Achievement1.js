@@ -46,7 +46,7 @@ export default function Achievement1() {
                                     <img src="/assets/img/achievement-icon/04.svg" alt="icon-img" />
                                 </div>
                                 <div className="content">
-                                    <h2><CounterUpFallback count={6} delay={900}/>+</h2>
+                                    <h2><CounterUpFallback count={8} delay={900}/>+</h2>
                                     <p>Años de Experiencia</p>
                                 </div>
                             </div>
