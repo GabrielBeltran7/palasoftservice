@@ -63,7 +63,7 @@ export default function Offcanvas({
                                             <i className="far fa-phone" />
                                         </div>
                                         <div className="offcanvas__contact-text">
-                                            <Link href="https://wa.me/573208903406?text=Hola%20Palasoft%20Services%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." target="_blank">+57 320 8903406</Link>
+                                            <Link href="https://wa.me/573208903406?text=Hola%20Palasoft%20Service%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." target="_blank">+57 320 8903406</Link>
                                         </div>
                                     </li>
                                 </ul>
