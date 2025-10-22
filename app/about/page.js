@@ -36,7 +36,7 @@ export default function About() {
                         </div>
                         <div className="content">
                           <h3>
-                            <CounterUp count={+6} />
+                            <CounterUp count={+8} />
                             Años de Experiencia
                           </h3>
                         </div>

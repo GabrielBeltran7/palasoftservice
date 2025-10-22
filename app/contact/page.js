@@ -137,7 +137,7 @@ export default function Contact() {
                         </div>
                       </div>
                       <div className="video-image">
-                        <img src="/assets/img/video.jpg" alt="img" />hh
+                        <img src="/assets/img/video.jpg" alt="img" />
                         <VideoPopup style={1} />
                       </div>
                     </div>

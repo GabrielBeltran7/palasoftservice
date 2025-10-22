@@ -19,7 +19,7 @@ export default function CounterUp({ count, time = 2 }) {
     }
   }, [isClient]);
 
-  // Fallback para SSR - mostrar el número sin animación
+  // Durante SSR mostrar el valor final para evitar hydration mismatch
   if (!isClient) {
     return <span>{count}</span>;
   }
@@ -27,7 +27,12 @@ export default function CounterUp({ count, time = 2 }) {
   return (
     <span suppressHydrationWarning>
       {hasAnimated ? (
-        <CountUp end={count} duration={time}>
+        <CountUp 
+          start={count} 
+          end={count} 
+          duration={time}
+          enableScrollSpy={false}
+        >
           {({ countUpRef }) => (
             <span ref={countUpRef} className="count"></span>
           )}
