@@ -1,36 +1,18 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 import styles from "./BlogPost.module.css";
-
-async function getBlogPost(slug) {
-  const filePath = path.join(process.cwd(), "app", "blog", "posts", `${slug}.mdx`);
-
-  if (!fs.existsSync(filePath)) {
-    return null;
-  }
-
-  const fileContent = fs.readFileSync(filePath, "utf-8");
-  const { content, data } = matter(fileContent);
-  const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
-
-  return { frontmatter: data, contentHtml };
-}
+import { getPostBySlug } from "../lib/posts";
 
 export async function generateMetadata({ params }) {
-  if (!params) return {};
+  const resolvedParams = await params;
+  if (!resolvedParams) return {};
 
-  const { slug } = await params;
+  const { slug } = resolvedParams;
   if (!slug) return {};
 
-  const post = await getBlogPost(slug);
+  const post = await getPostBySlug(slug);
   if (!post) {
     return {
       title: "Artículo no encontrado",
@@ -40,7 +22,8 @@ export async function generateMetadata({ params }) {
   }
 
   const { frontmatter } = post;
-  const BASE_URL = "https://www.estructurasverticales.com";
+  const BASE_URL = "https://palasoftservice.vercel.app";
+  const shareUrl = `https://palasoftservice.vercel.app/blog/${slug}`;
 
   return {
     title: frontmatter.title,
@@ -58,13 +41,13 @@ export async function generateMetadata({ params }) {
       publishedTime: frontmatter.date,
       images: frontmatter.image
         ? [
-            {
-              url: frontmatter.image,
-              width: 800,
-              height: 533,
-              alt: frontmatter.title,
-            },
-          ]
+          {
+            url: frontmatter.image,
+            width: 800,
+            height: 533,
+            alt: frontmatter.title,
+          },
+        ]
         : [],
     },
     twitter: {
@@ -77,12 +60,13 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPost({ params }) {
-  if (!params) return notFound();
+  const resolvedParams = await params;
+  if (!resolvedParams) return notFound();
 
-  const { slug } = await params;
+  const { slug } = resolvedParams;
   if (!slug) return notFound();
 
-  const post = await getBlogPost(slug);
+  const post = await getPostBySlug(slug);
   if (!post) return notFound();
 
   const { frontmatter, contentHtml } = post;

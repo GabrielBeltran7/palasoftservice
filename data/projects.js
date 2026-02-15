@@ -26,7 +26,7 @@ const projects = [
   {
     slug: "palasoftservices",
     category: "Web",
-    title: "Palasoft Services – Soluciones de TI y Tecnología",
+    title: "Palasoft Service – Soluciones de TI y Tecnología",
     image: "/assets/img/project/04.jpg",
     link: "",
     external: true,

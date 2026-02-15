@@ -23,7 +23,7 @@ export default function Footer1() {
         alt="logo Palasoft"
       />
     </Link>
-    <h3>Palasoft Services</h3>
+    <h3>Palasoft Service</h3>
   </div>
                                     <div className="footer-content">
                                         <p>
