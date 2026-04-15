@@ -106,7 +106,7 @@ export default function Contact() {
                           <div className="content">
                             <p>Solicitar Cotización</p>
                             <h3>
-                              <Link href="mailto:Palasoftservices@gmail.com">Palasoftservices@gmail.com</Link>
+                              <a href="mailto:Palasoftservices@gmail.com">Palasoftservices@gmail.com</a>
                             </h3>
                           </div>
                         </div>

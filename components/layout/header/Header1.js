@@ -28,12 +28,12 @@ export default function Header1({
               <ul className="contact-list">
                 <li >
                   <i className="far fa-envelope" />
-                  <Link
-                    href="/mailto:Palasoftservices@gmail.com"
+                  <a
+                    href="mailto:Palasoftservices@gmail.com"
                     className="link"
                   >
                     Palasoftservices@gmail.com
-                  </Link>
+                  </a>
                 </li>
                 <li className="fa-solid fa-phone-volume" />
       
